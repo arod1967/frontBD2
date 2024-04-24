@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Heroe } from '../../interfaces/heroe.interface';
 import { MongoDBService } from '../../services/mongo-db.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroes-list',
@@ -10,7 +11,10 @@ import { MongoDBService } from '../../services/mongo-db.service';
 export class HeroesListComponent {
   Heroes!: Heroe[];
 
-  constructor(private dataBD: MongoDBService) {
+  constructor(
+    private dataBD: MongoDBService,
+    private router: Router,
+  ) {
     
   }
 
@@ -40,5 +44,18 @@ export class HeroesListComponent {
       });
       */
   }
+
+  editarHeroe(unIdHeroe:any){
+    this.router.navigate(['/heroeedit', unIdHeroe]);
+  }
+
+  eliminarHeroe(unHeroe:any){
+
+  }
+
+  editarFotos(unHeroe:any){
+
+  }
+
 
 }

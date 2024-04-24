@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    //Aqui involucro el HTTPClientModule para realizar las perticiones RESTFUL
     HttpClientModule,
   ],
   providers: [],
