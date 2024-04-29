@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
 
     //Aqui involucro el HTTPClientModule para realizar las perticiones RESTFUL
     HttpClientModule,
+     
+    //Aqui involucramos el Forms Module
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
